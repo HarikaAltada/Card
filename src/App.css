@@ -1,0 +1,131 @@
+/* Body styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Semi-circle background on the left */
+body::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1px;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 100vh;
+  background: linear-gradient(to bottom left, #1ea9cb, #10c4a1);
+  border-radius: 0 350px 350px 0;
+  z-index: -1;
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  box-shadow: 0 9px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 750px;
+  height: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px; /* Diameter */
+  height: 70px; /* Diameter */
+  background: linear-gradient(to bottom right, #1ea9cb, #18b9b3, #10c4a1);
+  border-bottom-left-radius: 60px; /* Creates the semi-circle shape */
+}
+
+
+/* Left section (Profile picture) */
+.left-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #38b2ac;
+  display: flex;
+  box-shadow: 0 9px 10px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right section (Information) */
+.right-section {
+  width: 50%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.designation {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+.icon {
+  color: #38b2ac;
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Loading */
+.loading {
+  font-size: 1.5rem;
+  color: #333;
+}
